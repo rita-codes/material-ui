@@ -18,7 +18,7 @@ import PageContext from 'docs/src/modules/components/PageContext';
 import DemoContext from 'docs/src/modules/components/DemoContext';
 import GoogleAnalytics from 'docs/src/modules/components/GoogleAnalytics';
 import { CodeCopyProvider } from '@mui/docs/CodeCopy';
-import { ThemeProvider } from 'docs/src/modules/components/ThemeContext';
+import { ThemeProvider } from '@mui/docs/ThemeContext';
 import { CodeVariantProvider } from 'docs/src/modules/utils/codeVariant';
 import GlobalStyles from '@mui/material/GlobalStyles';
 import { extendTheme, useColorScheme as useJoyColorScheme } from '@mui/joy/styles';
@@ -26,6 +26,7 @@ import DocsStyledEngineProvider from 'docs/src/modules/utils/StyledEngineProvide
 import createEmotionCache from 'docs/src/createEmotionCache';
 import findActivePage from 'docs/src/modules/utils/findActivePage';
 import getProductInfoFromUrl from 'docs/src/modules/utils/getProductInfoFromUrl';
+import { AnalyticsProvider } from 'docs/src/modules/components/AnalyticsProvider';
 import { DocsProvider } from '@mui/docs/DocsProvider';
 import { mapTranslations } from '@mui/docs/i18n';
 import SvgMuiLogomark, {
@@ -428,8 +429,10 @@ function AppWrapper(props) {
               <DemoContext.Provider value={demoContextValue}>
                 <ThemeProvider>
                   <DocsStyledEngineProvider cacheLtr={emotionCache}>
-                    {children}
-                    <GoogleAnalytics />
+                    <AnalyticsProvider>
+                      {children}
+                      <GoogleAnalytics />
+                    </AnalyticsProvider>
                   </DocsStyledEngineProvider>
                 </ThemeProvider>
               </DemoContext.Provider>
