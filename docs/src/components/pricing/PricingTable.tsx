@@ -497,12 +497,8 @@ const rowHeaders: Record<string, React.ReactNode> = {
   'tree-view/virtualization': <ColumnHead label="Virtualization" />,
 
   // Scheduler
-  'scheduler/event-calendar': (
-    <ColumnHead label="Event Calendar" href="/x/react-scheduler/" />
-  ),
-  'scheduler/event-timeline': (
-    <ColumnHead label="Event Timeline" href="/x/react-scheduler/" />
-  ),
+  'scheduler/event-calendar': <ColumnHead label="Event Calendar" href="/x/react-scheduler/" />,
+  'scheduler/event-timeline': <ColumnHead label="Event Timeline" href="/x/react-scheduler/" />,
   // Scheduler - Event Calendar
   'scheduler/calendar-views': (
     <ColumnHead
@@ -523,7 +519,10 @@ const rowHeaders: Record<string, React.ReactNode> = {
     <ColumnHead label="Timezone support" href="/x/react-scheduler/timezone/" />
   ),
   'scheduler/calendar-editing': (
-    <ColumnHead label="Event editing, creation & deletion" href="/x/react-scheduler/event-calendar/editing/" />
+    <ColumnHead
+      label="Event editing, creation & deletion"
+      href="/x/react-scheduler/event-calendar/editing/"
+    />
   ),
   'scheduler/calendar-recurring-events': (
     <ColumnHead label="Recurring events" href="/x/react-scheduler/recurring-events/" />
@@ -532,13 +531,22 @@ const rowHeaders: Record<string, React.ReactNode> = {
     <ColumnHead label="Lazy loading" href="/x/react-scheduler/event-calendar/lazy-loading/" />
   ),
   'scheduler/calendar-resource-view': (
-    <ColumnHead label="Resource views" href="/x/react-scheduler/event-calendar/views/#resource-views" />
+    <ColumnHead
+      label="Resource views"
+      href="/x/react-scheduler/event-calendar/views/#resource-views"
+    />
   ),
   'scheduler/calendar-constraints': (
-    <ColumnHead label="Event constraints" href="/x/react-scheduler/event-calendar/events/#event-constraints" />
+    <ColumnHead
+      label="Event constraints"
+      href="/x/react-scheduler/event-calendar/events/#event-constraints"
+    />
   ),
   'scheduler/calendar-copy-paste-events': (
-    <ColumnHead label="Copy & paste events" href="/x/react-scheduler/event-calendar/editing/#copy-paste-events" />
+    <ColumnHead
+      label="Copy & paste events"
+      href="/x/react-scheduler/event-calendar/editing/#copy-paste-events"
+    />
   ),
   'scheduler/calendar-undo-redo': (
     <ColumnHead label="Undo / Redo" href="/x/react-scheduler/event-calendar/editing/#undo-redo" />
@@ -567,7 +575,10 @@ const rowHeaders: Record<string, React.ReactNode> = {
     <ColumnHead label="Timezone support" href="/x/react-scheduler/timezone/" />
   ),
   'scheduler/timeline-editing': (
-    <ColumnHead label="Event editing, creation & deletion" href="/x/react-scheduler/event-timeline/editing/" />
+    <ColumnHead
+      label="Event editing, creation & deletion"
+      href="/x/react-scheduler/event-timeline/editing/"
+    />
   ),
   'scheduler/timeline-recurring-events': (
     <ColumnHead label="Recurring events" href="/x/react-scheduler/recurring-events/" />
@@ -582,10 +593,16 @@ const rowHeaders: Record<string, React.ReactNode> = {
     <ColumnHead label="Virtualization" href="/x/react-scheduler/event-timeline/virtualization/" />
   ),
   'scheduler/timeline-constraints': (
-    <ColumnHead label="Event constraints" href="/x/react-scheduler/event-timeline/events/#event-constraints" />
+    <ColumnHead
+      label="Event constraints"
+      href="/x/react-scheduler/event-timeline/events/#event-constraints"
+    />
   ),
   'scheduler/timeline-copy-paste-events': (
-    <ColumnHead label="Copy & paste events" href="/x/react-scheduler/event-timeline/editing/#copy-paste-events" />
+    <ColumnHead
+      label="Copy & paste events"
+      href="/x/react-scheduler/event-timeline/editing/#copy-paste-events"
+    />
   ),
   'scheduler/timeline-undo-redo': (
     <ColumnHead label="Undo / Redo" href="/x/react-scheduler/event-timeline/editing/#undo-redo" />
