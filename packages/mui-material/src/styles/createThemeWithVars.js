@@ -570,7 +570,7 @@ export default function createThemeWithVars(options = {}, ...args) {
         'border',
         colorMix(
           safeLighten,
-          colorMix(safeAlpha, nativeColor ? getCssVar('palette-divider') : palette.divider, 1),
+          safeAlpha(nativeColor ? getCssVar('palette-divider') : palette.divider, 1),
           0.88,
         ),
       );
@@ -887,7 +887,7 @@ export default function createThemeWithVars(options = {}, ...args) {
         'border',
         colorMix(
           safeDarken,
-          colorMix(safeAlpha, nativeColor ? getCssVar('palette-divider') : palette.divider, 1),
+          safeAlpha(nativeColor ? getCssVar('palette-divider') : palette.divider, 1),
           0.68,
         ),
       );
@@ -984,6 +984,7 @@ export default function createThemeWithVars(options = {}, ...args) {
       theme: this,
     });
   };
+  theme.internal_cache = {};
   theme.toRuntimeSource = stringifyTheme; // for Pigment CSS integration
 
   return theme;

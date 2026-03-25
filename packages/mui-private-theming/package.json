@@ -1,6 +1,6 @@
 {
   "name": "@mui/private-theming",
-  "version": "9.0.0-alpha.0",
+  "version": "9.0.0-beta.0",
   "author": "MUI Team",
   "description": "Private - The React theme context to be shared between `@mui/styles` and `@mui/material`.",
   "keywords": [
@@ -24,13 +24,13 @@
     "url": "https://opencollective.com/mui-org"
   },
   "scripts": {
-    "build": "code-infra build --skipTsc",
+    "build": "code-infra build --flat --skipTsc",
     "release": "pnpm build && pnpm publish",
     "test": "pnpm --workspace-root test:unit --project \"*:@mui/private-theming\"",
     "typescript": "tsc -p tsconfig.json"
   },
   "dependencies": {
-    "@babel/runtime": "^7.28.6",
+    "@babel/runtime": "^7.29.2",
     "@mui/utils": "workspace:*",
     "prop-types": "^15.8.1"
   },
