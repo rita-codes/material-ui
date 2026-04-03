@@ -559,7 +559,7 @@ const rowHeaders: Record<string, React.ReactNode> = {
   ),
   'scheduler/calendar-accessibility': <ColumnHead label="Accessibility & keyboard navigation" />,
   'scheduler/calendar-localization': (
-    <ColumnHead label="Localization" href="/x/react-scheduler/localization/" />
+    <ColumnHead label="Localization" href="/x/react-scheduler/event-calendar/localization/" />
   ),
   // Scheduler - Event Timeline
   'scheduler/timeline-views': (
@@ -615,7 +615,7 @@ const rowHeaders: Record<string, React.ReactNode> = {
   ),
   'scheduler/timeline-accessibility': <ColumnHead label="Accessibility & keyboard navigation" />,
   'scheduler/timeline-localization': (
-    <ColumnHead label="Localization" href="/x/react-scheduler/localization/" />
+    <ColumnHead label="Localization" href="/x/react-scheduler/event-timeline/localization/" />
   ),
 
   'mui-x-production': <ColumnHead label="Perpetual use in production" />,
