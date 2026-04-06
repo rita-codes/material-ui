@@ -8,7 +8,6 @@ import PivotTableChartRoundedIcon from '@mui/icons-material/PivotTableChartRound
 import CalendarMonthRoundedIcon from '@mui/icons-material/CalendarMonthRounded';
 import AccountTreeRounded from '@mui/icons-material/AccountTreeRounded';
 import BarChartRoundedIcon from '@mui/icons-material/BarChartRounded';
-import EventNoteRoundedIcon from '@mui/icons-material/EventNoteRounded';
 import { visuallyHidden } from '@mui/utils';
 import Highlighter from 'docs/src/components/action/Highlighter';
 import { Link } from '@mui/docs/Link';
@@ -119,13 +118,6 @@ export default function XComponentsSwitcher(props: {
       label="Display hierarchical data, such as a file system navigator."
       icon={<AccountTreeRounded />}
       href={ROUTES.treeViewOverview}
-    />,
-    <ComponentItem
-      name="Scheduler"
-      description="Event calendar and timeline components."
-      label="Event calendar and timeline components."
-      icon={<EventNoteRoundedIcon />}
-      href={ROUTES.schedulerOverview}
     />,
   ];
   return (
