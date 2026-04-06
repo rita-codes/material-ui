@@ -18,12 +18,12 @@ import Divider from '@mui/material/Divider';
 import RefreshRoundedIcon from '@mui/icons-material/RefreshRounded';
 import ResetFocusIcon from '@mui/icons-material/CenterFocusWeak';
 import { useRouter } from 'next/router';
-import { CODE_VARIANTS } from 'docs/src/modules/constants';
-import { useSetCodeVariant } from 'docs/src/modules/utils/codeVariant';
-import { useTranslate } from '@mui/docs/i18n';
+import { CODE_VARIANTS } from '@mui/internal-core-docs/constants';
+import { useSetCodeVariant } from '@mui/internal-core-docs/codeVariant';
+import { useTranslate } from '@mui/internal-core-docs/i18n';
 import OpenMuiChat from 'docs/src/modules/components/OpenMuiChat';
 import stylingSolutionMapping from 'docs/src/modules/utils/stylingSolutionMapping';
-import { useDemoContext } from 'docs/src/modules/components/DemoContext';
+import { useDemoContext } from '@mui/internal-core-docs/DemoContext';
 import codeSandbox from '../sandbox/CodeSandbox';
 import stackBlitz from '../sandbox/StackBlitz';
 

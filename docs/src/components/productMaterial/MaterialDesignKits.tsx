@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import ExtensionRoundedIcon from '@mui/icons-material/ExtensionRounded';
 import DrawRoundedIcon from '@mui/icons-material/DrawRounded';
 import Section from 'docs/src/layouts/Section';
-import SectionHeadline from 'docs/src/components/typography/SectionHeadline';
+import SectionHeadline from '@mui/internal-core-docs/SectionHeadline';
 import GradientText from 'docs/src/components/typography/GradientText';
 import Item, { Group } from 'docs/src/components/action/Item';
 import Highlighter from 'docs/src/components/action/Highlighter';
@@ -17,7 +17,7 @@ import {
   MaterialDesignKitInfo,
   MaterialFigmaComponents,
 } from 'docs/src/components/productDesignKit/DesignKitDemo';
-import { Link } from '@mui/docs/Link';
+import { Link } from '@mui/internal-core-docs/Link';
 
 const Image = styled('img')(({ theme }) => ({
   transition: '0.4s',
@@ -42,7 +42,7 @@ export default function MaterialDesignKits({ gradient }: MaterialDesignKitsProps
 
   return (
     <Section cozy bg={gradient ? 'gradient' : 'white'}>
-      <Grid container spacing={2} alignItems="center">
+      <Grid container spacing={2} sx={{ alignItems: 'center' }}>
         <Grid sx={{ minWidth: 0 }} size={{ md: 6 }}>
           <SectionHeadline
             overline="Design resources"

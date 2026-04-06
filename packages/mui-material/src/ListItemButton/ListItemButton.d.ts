@@ -22,8 +22,7 @@ export interface ListItemButtonBaseProps {
    */
   autoFocus?: boolean | undefined;
   /**
-   * The content of the component if a `ListItemSecondaryAction` is used it must
-   * be the last child.
+   * The content of the component.
    */
   children?: React.ReactNode;
   /**
@@ -77,6 +76,7 @@ export type ListItemButtonTypeMap<
  * Demos:
  *
  * - [Lists](https://next.mui.com/material-ui/react-list/)
+ * - [Menubar](https://next.mui.com/material-ui/react-menubar/)
  *
  * API:
  *

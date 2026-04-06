@@ -36,7 +36,11 @@ export type SpeedDialSlotsAndSlotProps = CreateSlotsAndSlotProps<
      * Props forwarded to the transition slot.
      * By default, the available props are based on the [Zoom](https://mui.com/material-ui/api/zoom/#props) component.
      */
-    transition: SlotComponentProps<React.ElementType, TransitionProps, SpeedDialOwnerState>;
+    transition: SlotComponentProps<
+      React.ElementType<TransitionProps>,
+      TransitionProps,
+      SpeedDialOwnerState
+    >;
   }
 >;
 
@@ -104,13 +108,6 @@ export interface SpeedDialProps
    */
   sx?: SxProps<Theme> | undefined;
   /**
-   * The component used for the transition.
-   * [Follow this guide](https://mui.com/material-ui/transitions/#transitioncomponent-prop) to learn more about the requirements for this component.
-   * @default Zoom
-   * * @deprecated Use `slots.transition` instead. This prop will be removed in a future major release. [How to migrate](/material-ui/migration/migrating-from-deprecated-apis/)
-   */
-  TransitionComponent?: React.JSXElementConstructor<TransitionProps> | undefined;
-  /**
    * The duration for the transition, in milliseconds.
    * You may specify a single timeout for all transitions, or individually with an object.
    * @default {
@@ -119,12 +116,6 @@ export interface SpeedDialProps
    * }
    */
   transitionDuration?: TransitionProps['timeout'] | undefined;
-  /**
-   * Props applied to the transition element.
-   * By default, the element is based on this [`Transition`](https://reactcommunity.org/react-transition-group/transition/) component.
-   * @deprecated Use `slotProps.transition` instead. This prop will be removed in a future major release. [How to migrate](/material-ui/migration/migrating-from-deprecated-apis/)
-   */
-  TransitionProps?: TransitionProps | undefined;
 }
 
 export interface SpeedDialOwnerState extends SpeedDialProps {}

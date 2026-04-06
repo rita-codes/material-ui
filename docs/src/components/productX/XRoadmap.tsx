@@ -15,8 +15,8 @@ import FormatSizeRoundedIcon from '@mui/icons-material/FormatSizeRounded';
 import ViewTimelineIcon from '@mui/icons-material/ViewTimeline';
 import { alpha } from '@mui/material/styles';
 import ROUTES from 'docs/src/route';
-import { Link } from '@mui/docs/Link';
-import SectionHeadline from 'docs/src/components/typography/SectionHeadline';
+import { Link } from '@mui/internal-core-docs/Link';
+import SectionHeadline from '@mui/internal-core-docs/SectionHeadline';
 import Section from 'docs/src/layouts/Section';
 import GradientText from 'docs/src/components/typography/GradientText';
 
@@ -99,7 +99,7 @@ export default function XRoadmap() {
         }`,
       }}
     >
-      <Grid container spacing={2} alignItems="center" justifyContent="space-between">
+      <Grid container spacing={2} sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
         <Grid size={{ xs: 12, md: 5 }}>
           <SectionHeadline
             overline="Roadmap"

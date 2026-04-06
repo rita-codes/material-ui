@@ -1,14 +1,15 @@
 import PropTypes from 'prop-types';
 import { exactProp } from '@mui/utils';
-import { Ad, AdGuest } from '@mui/docs/Ad';
+import { Ad, AdGuest } from '@mui/internal-core-docs/Ad';
 import RichMarkdownElement from 'docs/src/modules/components/RichMarkdownElement';
 import AppLayoutDocs from 'docs/src/modules/components/AppLayoutDocs';
-import { useUserLanguage } from '@mui/docs/i18n';
+import { useUserLanguage } from '@mui/internal-core-docs/i18n';
 
 export default function MarkdownDocs(props) {
   const {
     disableAd = false,
     disableToc = false,
+    wideLayout,
     demos = {},
     docs,
     demoComponents,
@@ -27,6 +28,7 @@ export default function MarkdownDocs(props) {
       description={localizedDoc.description}
       disableAd={disableAd}
       disableToc={disableToc}
+      wideLayout={wideLayout}
       location={localizedDoc.location}
       title={localizedDoc.title}
       toc={localizedDoc.toc}
@@ -52,6 +54,7 @@ export default function MarkdownDocs(props) {
 }
 
 MarkdownDocs.propTypes = {
+  wideLayout: PropTypes.bool,
   demoComponents: PropTypes.object,
   demos: PropTypes.object,
   disableAd: PropTypes.bool,

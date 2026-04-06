@@ -20,11 +20,11 @@ import ArrowDropDownRoundedIcon from '@mui/icons-material/ArrowDropDownRounded';
 import DoneRounded from '@mui/icons-material/DoneRounded';
 import LogoWithCopyMenu from 'docs/src/components/action/LogoWithCopyMenu';
 import AppNavDrawerItem from 'docs/src/modules/components/AppNavDrawerItem';
-import { pageToTitleI18n } from 'docs/src/modules/utils/helpers';
-import PageContext, { ProductVersion } from 'docs/src/modules/components/PageContext';
-import { useTranslate } from '@mui/docs/i18n';
+import { pageToTitleI18n } from '@mui/internal-core-docs/helpers';
+import PageContext, { ProductVersion } from '@mui/internal-core-docs/PageContext';
+import { useTranslate } from '@mui/internal-core-docs/i18n';
 import MuiProductSelector from 'docs/src/modules/components/MuiProductSelector';
-import { MuiPage } from 'docs/src/MuiPage';
+import { MuiPage } from '@mui/internal-core-docs/MuiPage';
 
 // TODO: Collapse should expose an API to customize the duration based on the height.
 function transitionTheme(theme: Theme) {
@@ -468,10 +468,10 @@ export default function AppNavDrawer(props: AppNavDrawerProps) {
         </ToolbarDiv>
         <Box
           sx={{
-            pt: 0.5,
-            pb: 5,
-            overflowY: 'auto',
+            display: 'flex',
+            flexDirection: 'column',
             flexGrow: 1,
+            overflow: 'hidden',
             ...(swipeableDrawer
               ? {}
               : {
@@ -480,9 +480,19 @@ export default function AppNavDrawer(props: AppNavDrawerProps) {
                 }),
           }}
         >
-          <PersistScroll slot="side" enabled>
-            {navItems}
-          </PersistScroll>
+          <Box
+            sx={{
+              pt: 0.5,
+              pb: 5,
+              overflowY: 'auto',
+              flexGrow: 1,
+              scrollbarWidth: 'thin',
+            }}
+          >
+            <PersistScroll slot="side" enabled>
+              {navItems}
+            </PersistScroll>
+          </Box>
         </Box>
       </React.Fragment>
     );
@@ -510,8 +520,10 @@ export default function AppNavDrawer(props: AppNavDrawerProps) {
             ModalProps={{
               keepMounted: true,
             }}
-            PaperProps={{
-              component: AppNavPaperComponent,
+            slotProps={{
+              paper: {
+                component: AppNavPaperComponent,
+              },
             }}
           >
             {drawer}
@@ -519,8 +531,10 @@ export default function AppNavDrawer(props: AppNavDrawerProps) {
         ) : (
           <StyledDrawer
             variant="permanent"
-            PaperProps={{
-              component: AppNavPaperComponent,
+            slotProps={{
+              paper: {
+                component: AppNavPaperComponent,
+              },
             }}
             open
           >

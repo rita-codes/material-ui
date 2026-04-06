@@ -8,12 +8,12 @@ import KeyboardArrowRightRounded from '@mui/icons-material/KeyboardArrowRightRou
 import Head from 'docs/src/modules/components/Head';
 import AppHeader from 'docs/src/layouts/AppHeader';
 import AppFooter from 'docs/src/layouts/AppFooter';
-import BrandingCssVarsProvider from 'docs/src/BrandingCssVarsProvider';
+import { BrandingCssVarsProvider } from '@mui/internal-core-docs/branding';
 import Section from 'docs/src/layouts/Section';
-import { pageToTitleI18n } from 'docs/src/modules/utils/helpers';
-import { useTranslate } from '@mui/docs/i18n';
-import { Link } from '@mui/docs/Link';
-import type { MuiPage } from 'docs/src/MuiPage';
+import { pageToTitleI18n } from '@mui/internal-core-docs/helpers';
+import { useTranslate } from '@mui/internal-core-docs/i18n';
+import { Link } from '@mui/internal-core-docs/Link';
+import type { MuiPage } from '@mui/internal-core-docs/MuiPage';
 import materialPages from 'docs/data/material/pages';
 
 export default function Components() {

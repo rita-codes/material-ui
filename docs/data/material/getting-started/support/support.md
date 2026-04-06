@@ -82,7 +82,7 @@ This includes issues introduced by external sources, like browser upgrades or ch
 |              ^3.0.0 | 2018-08-27 | ❌                                                                 |
 |              ^2.0.0 | /          | ❌                                                                 |
 |              ^1.0.0 | 2018-06-18 | ❌                                                                 |
-|             <=1.0.0 | 2014-10-05 | ❌                                                                 |
+|          &lt;=1.0.0 | 2014-10-05 | ❌                                                                 |
 
 ## Community
 
@@ -90,17 +90,6 @@ This includes issues introduced by external sources, like browser upgrades or ch
 
 The Material UI community is active on both [X/Twitter](https://x.com/MaterialUI) and [LinkedIn](https://www.linkedin.com/company/mui/).
 These are great platforms to share what you're working on and connect with other developers.
-
-### Discord
-
-We have a [Discord Server](https://mui.com/r/discord/) to bring the Material UI community together.
-Our tools are used by thousands of developers and teams all around the world, many of whom actively engage with the community.
-
-You can join Discord to engage in lively discussions, share your projects, and interact with developers just like you from all around the world. We'd love for you to join us!
-
-:::warning
-How-to questions are not accepted on Discord, they should be asked on [Stack Overflow](#stack-overflow).
-:::
 
 ## Custom work
 

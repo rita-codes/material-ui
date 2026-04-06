@@ -24,14 +24,13 @@ import ArrowOutwardRoundedIcon from '@mui/icons-material/ArrowOutwardRounded';
 import XIcon from '@mui/icons-material/X';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import RssFeedIcon from '@mui/icons-material/RssFeed';
-import DiscordIcon from 'docs/src/icons/DiscordIcon';
 // Other imports
-import { Link } from '@mui/docs/Link';
-import PageContext from 'docs/src/modules/components/PageContext';
+import { Link } from '@mui/internal-core-docs/Link';
+import PageContext from '@mui/internal-core-docs/PageContext';
 import SvgMuiLogotype from 'docs/src/icons/SvgMuiLogotype';
 import EditPage from 'docs/src/modules/components/EditPage';
-import { useUserLanguage, useTranslate } from '@mui/docs/i18n';
-import { pageToTitleI18n } from 'docs/src/modules/utils/helpers';
+import { useUserLanguage, useTranslate } from '@mui/internal-core-docs/i18n';
+import { pageToTitleI18n } from '@mui/internal-core-docs/helpers';
 import useLocalStorageState from '@mui/utils/useLocalStorageState';
 
 const FooterLink = styled(Link)(({ theme }) => {
@@ -52,8 +51,8 @@ const FooterLink = styled(Link)(({ theme }) => {
 });
 
 /**
- * @typedef {import('docs/src/pages').MuiPage} MuiPage
- * @typedef {import('docs/src/pages').OrderedMuiPage} OrderedMuiPage
+ * @typedef {import('@mui/internal-core-docs/MuiPage').MuiPage} MuiPage
+ * @typedef {import('@mui/internal-core-docs/MuiPage').OrderedMuiPage} OrderedMuiPage
  */
 
 /**
@@ -406,10 +405,12 @@ export default function AppLayoutDocsFooter(props) {
                   rows={2}
                   value={comment}
                   onChange={handleChangeTextfield}
-                  inputProps={{
-                    'aria-label': t('feedbackCommentLabel'),
-                    'aria-describedby': 'feedback-description',
-                    ref: inputRef,
+                  slotProps={{
+                    htmlInput: {
+                      'aria-label': t('feedbackCommentLabel'),
+                      'aria-describedby': 'feedback-description',
+                      ref: inputRef,
+                    },
                   }}
                 />
                 {rating !== 1 && typeof window !== 'undefined' && (
@@ -508,16 +509,6 @@ export default function AppLayoutDocsFooter(props) {
               size="small"
             >
               <XIcon fontSize="small" sx={{ color: iconColor }} />
-            </IconButton>
-            <IconButton
-              target="_blank"
-              rel="noopener"
-              href="https://mui.com/r/discord/"
-              aria-label="Discord"
-              title="Discord"
-              size="small"
-            >
-              <DiscordIcon fontSize="small" sx={{ color: iconColor }} />
             </IconButton>
             <IconButton
               target="_blank"

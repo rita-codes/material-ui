@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Router from 'next/router';
-import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
+import { pathnameToLanguage } from '@mui/internal-core-docs/helpers';
 
 export function samePageLinkNavigation(event: MouseEvent) {
   if (

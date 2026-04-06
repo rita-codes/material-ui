@@ -14,8 +14,8 @@ import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import SettingsBrightnessIcon from '@mui/icons-material/SettingsBrightness';
 import FormatTextdirectionLToRIcon from '@mui/icons-material/FormatTextdirectionLToR';
 import FormatTextdirectionRToLIcon from '@mui/icons-material/FormatTextdirectionRToL';
-import { useColorSchemeShim, useChangeTheme } from 'docs/src/modules/components/ThemeContext';
-import { useTranslate } from '@mui/docs/i18n';
+import { useColorSchemeShim, useChangeTheme } from '@mui/internal-core-docs/ThemeContext';
+import { useTranslate } from '@mui/internal-core-docs/i18n';
 
 const Heading = styled(Typography)(({ theme }) => ({
   margin: '16px 0 8px',
@@ -128,13 +128,15 @@ export default function AppSettingsDrawer(props) {
       anchor="right"
       onClose={onClose}
       open={open}
-      PaperProps={{
-        elevation: 0,
-        sx: {
-          width: { xs: 310, sm: 360 },
-          borderRadius: '10px 0px 0px 10px',
-          border: '1px solid',
-          borderColor: 'divider',
+      slotProps={{
+        paper: {
+          elevation: 0,
+          sx: {
+            width: { xs: 310, sm: 360 },
+            borderRadius: '10px 0px 0px 10px',
+            border: '1px solid',
+            borderColor: 'divider',
+          },
         },
       }}
       {...other}
